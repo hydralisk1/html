@@ -105,9 +105,10 @@
             $(document).ready(function() {
             
                 $(window).scroll(function() {
-                    $('.main_str_container').css("height", $('.main_img').css("height"));
-                    $('.chart_container').css("height", $('.main_img').css("height"));
-                    
+                    $('.main_img_container').css("height", $(window).height());
+                    $('.main_str_container').css("height", $(window).height());
+                    $('.chart_container').css("height", $(window).height());
+
                     if ($(window).scrollTop() <= 400){
                         $('.main_img').css("opacity", 1 - $(window).scrollTop() / 400);
                         $('.main_str_container').css("opacity", $(window).scrollTop() / 400);
@@ -123,10 +124,6 @@
                     }
                 });
             });
-
-            function chart(){
-                window.scrollTo(0, 1000);
-            }
 
             function chart(){
                 window.scrollTo(0, 1000);
